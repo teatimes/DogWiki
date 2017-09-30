@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load forum_extra %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="filter-box">
+    <form action="" method="get">
+        {% csrf_token %}
+        <div class="input-group col-lg-2">
+               {% render_field filter.form.text type="text" class="form-control" placeholder="Søk" %}             
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Søk</button>
+            </span>
+        </div>
+   
+    </form>
+</div>
+
+
+<div id="add">
+    <a href="{% url 'create_post' %}"> 
+        <button class="btn btn-default" type="button">
+            Lag ny post 
+        </button>
+    </a>
+    
+</div>
+
+<div id="posts">
+    <ul class="posts-list list-group">
+     {% if not filter.qs %}
+        <p> Ingen match </p>
+     {% else %}
+        {% for post in filter.qs %}
+            <a href="{% url 'forum_post' pk=post.pk %}">
+                <li class="list-group-item post-box" >
+                    {{ post.title }}
+                    ({{ response_counts|get_item:post.pk }})
+                </li>
+            </a>
+        {% endfor %}
+     {% endif %}
+
+    </ul>
+
+</div>
+
+
+{% endblock %}

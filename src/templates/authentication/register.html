@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section id="register">
+    <div class="container">
+        <div class="page-header">
+            <h2>Register bruker</h2>
+        </div>
+
+        <form method="post" action="{% url 'auth_register' %}" enctype='multipart/form-data' class="form-horizontal">
+            {% csrf_token %}
+            {% crispy form %}
+        </form>
+    </div>
+
+</section>
+
+{% endblock %}
+

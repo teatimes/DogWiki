@@ -1,0 +1,252 @@
+.navbar > .container-fluid {
+    background-color: #1D202A;
+}
+
+.rail {
+    width: 200px;
+}
+
+#content {
+    margin-top: -20px;
+    padding: 20px;
+    min-height: 800px;
+    background-color: #E3E3E3;
+}
+
+.main {
+    min-height: 500px;
+    margin: 10px auto;
+    width: 1200px;
+}
+
+
+.center  {
+    margin: 0 auto;
+}
+
+.main-color {
+    background-color: #1D202A;
+}
+
+/** nav.html **/
+
+.nav, .nav a {
+    color: white !important;
+}
+
+.container-fluid {
+    padding-top: 10px;
+}
+
+.navbar-brand {
+    height: 80px !important;
+    width: 120px;
+    overflow: hidden;
+}
+
+#nav-logo {
+    height: 60px;
+}
+
+#nav-search {
+    padding-left: 30px !important;
+}
+
+#navbar-middle {
+    width: 50% !important;
+    display: inline-block;
+}
+
+.navbar-right {
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#nav-profile-image {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+#nav-profile-image + a {
+    display: inline-block;
+}
+
+/* index.html */
+
+.news-box {
+    background-color: white;
+    height: 50px;
+    margin: 10px;
+
+}
+/* litterature_list.html */
+
+.filter-box .search-field {
+    display: block;
+}
+
+.filter-box .topic-btns {
+    display: block;
+    margin-top: 10px;
+    padding: 0 0;
+}
+
+.filter-box .input-group-btn {
+    display: block;
+}
+
+.filter-box > .topic_btn {
+    display: inline;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.submit-btn {
+    display: block;
+}
+
+.book_box {
+}
+
+.book-cover-list {
+    display: inline;
+    width: 10%;
+}
+
+.book-box-left {
+    display: inline-block;
+    width: 60%;
+}
+
+.book-box-right {
+    display: inline-block;
+    width: 10%;
+}
+
+.book-list > .book-recomendations {
+    display: inline;
+}
+
+/** add_litterature.html **/
+
+.pick-book-btn {
+    display: block;
+    width: 600px;
+
+}
+
+.book-search-result {
+    padding-left: 190px;
+}
+/** book_detail.html **/
+
+.book-top-box {
+    height: 200px;
+    position: relative;
+}
+
+.book-cover-detail {
+    display: inline-block;
+    width: 10%;
+}
+
+#book-info {
+    display: inline-block;
+    height: 180px;
+    margin-left: 20px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -35px;
+    width: 80%;
+}
+
+/** detail-profile.html **/
+
+.profile_image {
+    margin-top: -100px;
+}
+
+.profile-picture {
+    height: 90px;
+    display: inline-block;
+    font-size: 9em;
+    padding-right: 10px;
+    margin: auto;
+
+}
+
+#profile-view {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    width: 100%;
+    height: 220px;
+    background-color: white;
+    position: relative;
+}
+
+.profile-details {
+    display: inline-block;
+}
+
+.follow-btn {
+    display: inline-block;
+}
+
+.edit-profile-btn {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+}
+/* members_list */
+
+.member_box {
+    height: 150px;
+}
+
+/* Forum */
+
+.list-post-div {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+
+}
+
+
+#forum-post-detail {
+    height: 100px;
+    border: solid 2px black;
+}
+
+#forum-post-comments-list {
+
+}
+
+.forum-post-response {
+
+}
+
+/* Footer */
+
+#footer {
+    display: block;
+    padding: 20px;
+    background-color: #1D202A;
+    margin-bottom: 0px;
+}
+
+#footer-logo {
+    display: block;
+    margin: auto;
+    width: 35%;
+
+}
+
+#footer-bottom p {
+    color: white;
+    text-align: center;
+}

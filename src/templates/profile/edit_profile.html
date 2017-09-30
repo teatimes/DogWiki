@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section id="register">
+    <div class="container">
+        <div class="page-header">
+            <h2>Endre profil</h2>
+        </div>
+
+        <form method="post" action="{% url 'edit_profile' pk=user.pk%}" enctype='multipart/form-data' class="form-horizontal">
+            {% csrf_token %}
+            {{ form.errors }}
+            {{ form.non_field_errors }}
+            {% crispy form %}
+        </form>
+    </div>
+
+</section>
+
+{% endblock %}
+

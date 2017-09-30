@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="main">
+    <h1 class="center">
+        Welcome to Dogwiki!
+    </h1>
+    <div id="news-list-box">
+        <h2>
+            News
+        </h2>
+        {% for action in action_list %}
+            <div class="news-box">
+                {{ action.date }}- {{ action.action }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div>
+    <form method="post" action="{% url 'create_post' %}" class="form-horizontal">
+        {% csrf_token %}
+        {% crispy form %}
+        <button class="" type="submit" name="post-btn">Post</button>
+    </form>
+</div>
+{% endblock %}

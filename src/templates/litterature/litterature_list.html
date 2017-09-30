@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% load litterature_extra %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="filter-box">
+     <form action="" method="get" class="form_horizontal">
+        {% csrf_token %}
+    
+        <div class="input-group col-lg-6">
+               {% render_field filter.form.title type="text" class="form-control" placeholder="Søk etter tittel, forfatter eller nøkkelord" %}
+            
+        </div>
+           
+        <!--
+        <div class="topic-btns col-lg-6" >
+            <div class="btn-group btn-group-justified" role="group">
+            
+                {% for choice in filter.form.topic %}
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default">
+                            {{ choice.tag }} {{ choice.choice_label }}
+                        </button>
+                    </div>
+                {% endfor %}
+            
+            </div>
+        </div>
+        -->
+
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit" value="Søk">Søk</button>
+        </span>
+    </form>
+</div>
+
+
+<div id="add">
+    <a href="{% url 'add_book' %}">
+        <button class="btn btn-default" type="button">
+            Legg til ei ny bok
+        </button>
+    </a>
+    </span>
+</div>
+
+<div class="books">
+    <ul class="books-list list-group">
+
+        {% for book in filter.qs %}
+            <a href="{% url 'book_detail' pk=book.pk %}">
+                <li class="list-group-item book-box">
+                    {% if book.cover_url == None %}
+                        <img src="/static/icons/default/default-book-cover.png">
+                    {% else %}
+                        <img src="{{ book.cover_url }}" class="book-cover-list">
+                    {% endif %}
+                    <div class="book-box-left">
+                        <h3 class="book-title"> {{ book.title }} </h3>
+                        <h5 class="book-author">
+                           {% get_author_list book_pk=book.pk %}
+                        </h5>
+                    </div>
+
+                    <div class="book-box-right">
+
+                        <h4 class="book-topic">
+                        {% for t in book.topic.all %}
+                            {{ t.name }}/
+                        {% endfor %}
+                        </h4>
+                        <h5 class="book-info"> ({{ book.published }}) </h5>
+                    </div>
+
+                </li>
+            </a>
+        {% endfor %}
+
+    </ul>
+
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+.idea/*
+*.pyc
+logs/*
+*.sqlite3
+*.log
+media/*
+src/settings/*

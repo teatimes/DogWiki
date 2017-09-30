@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load profile_extra %}
+
+{% block content %}
+
+<div class="main">
+    <div id="profile-view">
+        <!-- TODO: insert profile image -->
+        <!-- <span class="glyphicon glyphicon-picture profile-picture" aria-hidden="true"></span> -->
+
+        <img class="profile_image" src="{{ user.profile_image.url }}" width="100" height="100">
+
+        <div class="profile-details">
+            <h3>
+                {{ user.first_name }} {{ user.last_name}}
+            </h3>
+            <h4>
+                {{ age }} år
+            </h4>
+
+           
+            <h4>
+                Kompetanse: {{ user.competence }}
+            </h4>
+
+        </div>
+
+        {% if request.user != user %}
+            <form method="post" class="follow-btn" action="{% url 'profile' pk=user.pk %}">
+                {% csrf_token %}
+
+                <button type="submit" class="btn btn-default btn-lg" onclick="" name="follow-btn" value="Følg">
+                    <span class="">
+                        <p> {% follow_text following_pk=request.user.pk followed_pk=user.pk %} </p>
+
+                    </span>
+                </button>
+
+            </form>
+        {% else %}
+            <a href="{% url 'edit_profile' pk=user.pk%}" class="edit-profile-btn">
+                <button type="" class="btn btn-primary">
+                    Endre profil
+                </button>
+            </a>
+            
+        {% endif %}
+    </div>
+
+    <div>
+        {% if request.user == user %}
+            <h2>Lest</h2>
+            {% for rel in read.all %}
+            <p>
+                <a href="{% url 'book_detail' pk=book.pk">{{ rel.book.title }} - {{ rel.book.author }}</a>
+            </p>
+            {% endfor %}
+        {% endif %}
+        <h3>Anbefaler</h3>
+        {% for rel in recommend.all %}
+        <p>
+            <a href="{% url 'book_detail' pk=book.pk">{{ rel.book.title }} - {{ rel.book.author }}</a>
+        </p>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

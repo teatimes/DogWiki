@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section id="login">
+    <div class="container">
+        <div class="page-header">
+            <h2>Logg inn</h2>
+        </div>
+
+        <form method="post" class="form-horizontal">
+            {% csrf_token %}
+            {% crispy form %}
+           
+        </form>
+        <p>
+            Ikke bruker? <a href="{% url 'auth_register' %}">Registrer deg her</a>
+        </p>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+[
+
+	// Users
+	{
+		"model": "authentication.User",
+		"pk": 1,
+		"fields": {
+			"first_name": "Kari",
+			"last_name": "Nordmann",
+			"username": "karin",
+			"birth_year": 1994,
+			"email": "kari@example.com",
+			"profile_image": "media/1_profile.png",
+			"competence": "agility" ,
+			"password": "123qwe123qwe"
+		}
+	}, 
+	{
+		"model": "authentication.User",
+		"pk": 2,
+		"fields": {
+			"first_name": "Ola",
+			"last_name": "Nordmann",
+			"username": "olan",
+			"birth_year": 1980,
+			"email": "ola@example.com",
+			"profile_image": "media/2_profile.png",
+			"competence": "clickertraaining, therapy dog" ,
+			"password": "123qwe123qwe"
+		}
+	}, 
+	{
+		"model": "authentication.User",
+		"pk": 1,
+		"fields": {
+			"first_name": "Truls",
+			"last_name": "Hansen",
+			"username": "trulsh",
+			"birth_year": 1974,
+			"email": "truls@example.com",
+			"profile_image": "media/3_profile.png",
+			"competence": "hunting" ,
+			"password": "123qwe123qwe"
+		}
+	}, 
+
+	// Follow
+
+	{
+		"model": "authentication.Follow",
+		"pk": 1,
+		"fields": {
+			"following": 2,
+			"followed": 3
+		}
+	}, 
+	{
+		"model": "authentication.Follow",
+		"pk": 2,
+		"fields": {
+			"following": 2,
+			"followed": 1
+		}
+	}, 
+	{
+		"model": "authentication.Follow",
+		"pk": 3,
+		"fields": {
+			"following": 3,
+			"followed": 1
+		}
+	}
+
+	// Action
+
+	{
+		"model": "authentication.Action",
+		"pk": 1,
+		"fields": {
+			"user": 2,
+			"action": 3, 
+			"date": 
+		}
+	}
+
+
+]

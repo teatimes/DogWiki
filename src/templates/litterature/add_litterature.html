@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load litterature_extra %}
+
+{% block content %}
+
+<div class="container">
+    <div class="page-header">
+        <h2>Legg til bok</h2>
+    </div>
+
+    <form method="post" action="{% url 'add_book' %}" class="form-horizontal">
+        {% csrf_token %}
+        {% crispy form %}
+    </form>
+
+    <div class="book-search-result">
+        <form method="post" action="{% url 'add_book' %}" class='form-horisontal'>
+            {% csrf_token %}
+            {% for book in search_result %}
+                <button type="submit" name="{{ book.id }}" class="pick-book-btn ">
+                    <img src="{{ book.large_image_url }}" class="book-cover-list">
+                    <h4 class="book-title"> {{ book.title }} </h4>
+                    <h6 class="book-author"> {{ book.authors }} </h6>
+                </button>
+            {% endfor %}
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

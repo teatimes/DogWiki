@@ -1,0 +1,96 @@
+{% extends 'base.html' %}}
+{% load crispy_forms_tags %}
+{% load litterature_extra %}
+
+{% block content %}
+<div class="main">
+
+    <div id="book-detail">
+        <div class="book-top-box">
+            {% if book.cover_url == None %}
+                <img src="/static/icons/default/default-book-cover.png" class="book-cover-detail">
+            {% else %}
+                <img src="{{ book.cover_url }}" class="book-cover-detail">
+            {% endif %}
+            <div id="book-info">
+                <h1> {{ book.title }} </h1>
+                 <p class="book-author">
+                    {% get_author_list book_pk=book.pk %}
+                </p>
+            </div>
+
+        </div>
+
+        <div id="book-topics" >
+            Nøkkelord:
+            {% for topic in book.topic.all %}
+                <!-- TODO: fix topix link -->
+                <a href=" "> {{ topic }} </a>,
+            {% endfor %}
+        </div>
+
+        <div id="book-selfdefined-tags">
+            Andre nøkkelord:
+            {% for selfdefined_tag in book.selfdefined_tags.all %}
+                <a href=""> {{ selfdefined_tag }} </a>,
+            {% endfor %}
+        </div>
+
+        <div id="book-details">
+            <h2> Detaljer </h2>
+            <p> Utgitt: {{ book.published }} </p>
+            <p> ISBN-10: {{ book.isbn }} </p>
+            <a href="{{ book.shop_url }}"> Kjøp her </a>
+        </div>
+    </div>
+
+    <div class="read-and-recommended">
+        <form method="get" action="{% url 'book_detail' pk=pk %}">
+            {% csrf_token %}
+            <!-- If reccomended/not -->
+            <button type="submit" class="btn btn-default btn-lg" onclick="recommend(this)" name="rec-btn" value="Anbefal">
+              <span class="glyphicon {% is_rec_glyph user_pk=request.user.pk book_pk=book.pk %} " aria-hidden="true"></span>
+                <p>{% is_rec_text user_pk=request.user.pk book_pk=book.pk %}</p>
+            </button>
+
+            <!-- If read/not -->
+            <button type="submit" class="btn btn-default btn-lg" onclick="read(this)" name="read-btn" value="Ikke lest">
+                <span class="glyphicon {% is_read_glyph user_pk=request.user.pk book_pk=book.pk %}" aria-hidden="true"></span>
+                <p>{% is_read_text user_pk=request.user.pk book_pk=book.pk %}</p>
+            </button>
+        </form>
+    </div>
+
+    <div id="reviews">
+
+        <div id="add-review">
+            <h2> Legg til en review </h2>
+
+            <form method="post" action="{% url 'book_detail' pk=pk %}" class='form-horizontal'>
+                {% csrf_token %}
+                {% crispy form %}
+            </form>
+        </div>
+
+        </div>
+        <h2>
+            Reviews
+        </h2>
+        {% for review in review_list.all %}
+            <div class="review">
+                <h3>
+                    {{ review.title }}
+                </h3>
+                <h4>
+                    {{ review.author }}
+                </h4>
+                <p>
+                    {{ review.review }}
+                </p>
+                {{ review.rating }}
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

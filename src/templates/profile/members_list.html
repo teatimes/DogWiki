@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="main">
+    <div class="filter-box">
+
+         <form action="" method="get">
+            {% csrf_token %}
+            <div class="input-group col-lg-2">
+                   {% render_field filter.form.username type="text" class="form-control" placeholder="Søk på medlem" %}             
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Søk</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="row">
+        {% for member in filter.qs %}
+            {% if not member.is_superuser %}
+                <div class="col-sm-6 col-md-2 member_box">
+                    <div class="thumbnail">
+                        <a href="{% url 'profile' pk=member.pk %}">
+                            <img src="{{ member.profile_image.url }}" alt="{{ member.username }}" width="100" height="100">
+                            <div class="caption">
+                                <p>{{ member.first_name }} {{ member.last_name}} </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

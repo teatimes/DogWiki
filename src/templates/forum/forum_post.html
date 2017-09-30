@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load forum_extra %}
+
+{% block content %}
+
+<div id="forum-post-detail" class="well">
+    <div id="post-title">
+        {{ post.title }}
+    </div>
+    <div>
+        author and date
+        {{ post.author.get_full_name }} - {{ post.posted }}
+    </div>
+
+    <div>
+        {{ post.text }}
+    </div>
+    Antall responser: {{ response_counts|get_item:post.pk }}
+</div>
+
+
+<div id="forum-post-comments-list">
+    <form id="forum-post-form" method="post" action="{% url 'forum_post' pk=post.pk %}" class='form-horizontal' >
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="" type="submit" name="post-btn" value="add-response">Post</button>
+    </form>
+
+    <div id="forum-post-responses" class="">
+        {% for response in response_list %}
+        <div class="well forum-post-response">
+            <p>{{ response.text }} </p>
+            <div class="voting-btns">
+                <form method="post" action="{% url 'forum_post' pk=post.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-default btn-lg" name="upvote-btn" value="{{response.pk}}">
+                        <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                    </button>
+
+                    <button type="submit" class="btn btn-default btn-lg" name="downvote-btn" value="{{response.pk}}">
+                      <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    </button>
+                    Votes: {{ response.votes }}
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

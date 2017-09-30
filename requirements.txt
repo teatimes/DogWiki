@@ -1,0 +1,13 @@
+Django==1.10
+Unidecode
+django-crispy-forms
+django-markdown-deux
+django-pagedown
+django-filter
+psycopg2
+bottlenose
+Pillow
+lxml
+python-dateutil
+python-amazon-simple-product-api
+django-widget-tweaks

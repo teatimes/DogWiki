@@ -1,0 +1,537 @@
+
+[
+	{
+		"model": "litterature.Topic",
+		"pk": 1,
+		"fields": {
+			"name": "Kognitiv terapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 2,
+		"fields": {
+			"name": "Psykodynamisk terapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 3,
+		"fields": {
+			"name": "Psykodynamisk kortidssterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 4,
+		"fields": {
+			"name": "Acceptance and commitment therapy",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 5,
+		"fields": {
+			"name": "Klientsentrert terapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 6,
+		"fields": {
+			"name": "Parterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	},
+	{
+		"model": "litterature.Topic",
+		"pk": 7,
+		"fields": {
+			"name": "Kognitiv adferdsterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 8,
+		"fields": {
+			"name": "Dialektisk adferdsterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 9,
+		"fields": {
+			"name": "Emosjonsfokusert adferdsterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 10,
+		"fields": {
+			"name": "Eye movement desenitization and reprocessing (EMDR)",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 11,
+		"fields": {
+			"name": "Eksistensiell psykoterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 12,
+		"fields": {
+			"name": "Eksponeringsterpi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 13,
+		"fields": {
+			"name": "Familieterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	},
+	{
+		"model": "litterature.Topic",
+		"pk": 14,
+		"fields": {
+			"name": "Gruppeterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 15,
+		"fields": {
+			"name": "Interpersonlig psykoterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 16,
+		"fields": {
+			"name": "Mindfullness-basert kognitiv terapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 17,
+		"fields": {
+			"name": "Mindfullness-basert stressreduksjon",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 18,
+		"fields": {
+			"name": "Mentaliseringsbasert terapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 19,
+		"fields": {
+			"name": "Musikkterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 20,
+		"fields": {
+			"name": "Narrativ terapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	},
+	{
+		"model": "litterature.Topic",
+		"pk": 21,
+		"fields": {
+			"name": "Personsentrert terapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 22,
+		"fields": {
+			"name": "Psykoanalyse",
+			"belong_to": "therapy",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 23,
+		"fields": {
+			"name": "Narrativ eksponeringsterapi",
+			"belong_to": "therapy",
+			"books": []
+		}
+	},
+
+	{
+		"model": "litterature.Topic",
+		"pk": 24,
+		"fields": {
+			"name": "Biologisk psykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	},
+	{
+		"model": "litterature.Topic",
+		"pk": 25,
+		"fields": {
+			"name": "Personlighetspsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 26,
+		"fields": {
+			"name": "Sosialpsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 27,
+		"fields": {
+			"name": "Krisepsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	},
+	{
+		"model": "litterature.Topic",
+		"pk": 28,
+		"fields": {
+			"name": "Operativ psykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 29,
+		"fields": {
+			"name": "Organisasjonspsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 30,
+		"fields": {
+			"name": "Kulturpsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 31,
+		"fields": {
+			"name": "Helsepsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 32,
+		"fields": {
+			"name": "Lærings- og adferdspsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 33,
+		"fields": {
+			"name": "Kognitiv nevrovitenskap",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 34,
+		"fields": {
+			"name": "Kognitiv psykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 35,
+		"fields": {
+			"name": "Utviklingspsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 36,
+		"fields": {
+			"name": "Evolusjonspsykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 37,
+		"fields": {
+			"name": "Kritisk psykologi",
+			"belong_to": "course",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 38,
+		"fields": {
+			"name": "Metodologi",
+			"belong_to": "course",
+			"books": []
+		}
+	},
+
+
+	{
+		"model": "litterature.Topic",
+		"pk": 39,
+		"fields": {
+			"name": "Bipolar lidelse",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 40,
+		"fields": {
+			"name": "Depresjon",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 41,
+		"fields": {
+			"name": "Demenslidelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 42,
+		"fields": {
+			"name": "Avhengighetslidelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 43,
+		"fields": {
+			"name": "Generalisert angstlidelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 13,
+		"fields": {
+			"name": "Panikklidelse",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 44,
+		"fields": {
+			"name": "Fobiske angstlidelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	},
+	{
+		"model": "litterature.Topic",
+		"pk": 45,
+		"fields": {
+			"name": "Obsessiv kompulsiv lidelse",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 46,
+		"fields": {
+			"name": "Posttraumatisk stresslidelse",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 47,
+		"fields": {
+			"name": "Dissosiative lidelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 48,
+		"fields": {
+			"name": "Somatoforme lidelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 49,
+		"fields": {
+			"name": "Spiseforstyrrelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 50,
+		"fields": {
+			"name": "Søvnforstyrrelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 51,
+		"fields": {
+			"name": "Psykisk utviklingshemming",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 52,
+		"fields": {
+			"name": "Autisme",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 53,
+		"fields": {
+			"name": "Asperger syndrom",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 54,
+		"fields": {
+			"name": "Lese og skrivevansker",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 55,
+		"fields": {
+			"name": "Atferdsforstyrrelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 56,
+		"fields": {
+			"name": "ADHD",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 57,
+		"fields": {
+			"name": "Schizofreni og andre psykoselidelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}, 
+	{
+		"model": "litterature.Topic",
+		"pk": 58,
+		"fields": {
+			"name": "Personlighetsforstyrrelser",
+			"belong_to": "diagnose",
+			"books": []
+		}
+	}
+]
